@@ -1,0 +1,14 @@
+# Style configuration
+# This file controls the visual appearance of the site
+
+# Color scheme
+colors:
+  primary: "#fed136"      # Gold/yellow accent
+  secondary: "#212529"    # Dark
+  light: "#f8f9fa"        # Light gray
+  dark: "#000"            # Black
+  muted: "#6c757d"        # Gray
+
+# Background images
+backgrounds:
+  masthead: "images/bg.jpg"  # Header background image

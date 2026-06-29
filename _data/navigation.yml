@@ -1,0 +1,10 @@
+# Navigation links
+nav:
+  - title: "Serviços"
+    section: services
+  - title: "Projetos"
+    section: portfolio
+  - title: "Sobre"
+    section: about
+  - title: "Contato"
+    section: contact
