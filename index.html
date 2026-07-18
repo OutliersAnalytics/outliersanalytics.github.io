@@ -1,153 +1,346 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<title>Outliers Analytics — Inteligência Eleitoral</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outliers Analytics — Inteligência eleitoral com rigor estatístico</title>
+  <meta
+    name="description"
+    content="A Outliers Analytics transforma dados públicos em leituras eleitorais claras, auditáveis e úteis."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#inicio" aria-label="Outliers Analytics">
+        <svg class="brand-mark" viewBox="0 0 88 88" aria-hidden="true">
+          <circle cx="42" cy="36" r="28" class="ring"></circle>
+          <rect x="22" y="40" width="10" height="22" rx="3" class="bar bar-1"></rect>
+          <rect x="36" y="26" width="10" height="36" rx="3" class="bar bar-2"></rect>
+          <rect x="50" y="14" width="10" height="48" rx="3" class="bar bar-3"></rect>
+          <circle cx="55" cy="6" r="6" class="dot"></circle>
+          <path d="M58 58 L76 76" class="handle"></path>
+        </svg>
+        <span class="brand-text">
+          <strong>Outliers</strong>
+          <span>Analytics</span>
+        </span>
+      </a>
 
-<body class="is-preload">
+      <nav class="site-nav" aria-label="Seções">
+        <a href="#sobre">Descrição</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#metodo">Método</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Análise eleitoral com personalidade</p>
+          <h1>Leituras eleitorais claras, sem enfeite nem achismo.</h1>
+          <p class="hero-lead">
+            A Outliers Analytics organiza dados públicos, compara contextos e transforma a base
+            em análise que dá para ler rápido — sem perder o cuidado estatístico.
+          </p>
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<h1><a href="index.html">Outliers Analytics</a></h1>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#servicos">Ver serviços</a>
+            <a class="button button-secondary" href="#projetos">Ver projetos</a>
+          </div>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<div class="inner">
-				<h2>Menu</h2>
-				<ul class="links">
-					<li><a href="index.html">Início</a></li>
-					<li><a href="#projetos">Projetos</a></li>
-					<li><a href="#contato">Contato</a></li>
-				</ul>
-				<a href="#" class="close">Close</a>
-			</div>
-		</nav>
+          <dl class="signal-grid" aria-label="Pilares da atuação">
+            <div class="signal-card">
+              <dt>Base pública</dt>
+              <dd>Fontes abertas, organizadas e prontas para conferência.</dd>
+            </div>
+            <div class="signal-card">
+              <dt>Comparação útil</dt>
+              <dd>Território, tempo e participação entram na mesma leitura.</dd>
+            </div>
+            <div class="signal-card">
+              <dt>Visual limpo</dt>
+              <dd>Gráficos e painéis feitos para explicar, não distrair.</dd>
+            </div>
+          </dl>
+        </div>
 
-		<!-- Banner -->
-		<section id="banner">
-			<div class="inner">
-				<div class="logo">
-					<span class="icon fa-chart-line"></span>
-				</div>
-				<h2>Outliers Analytics</h2>
-				<p>Inteligência Eleitoral — Dados abertos para decisões mais claras</p>
-			</div>
-		</section>
+        <div class="hero-panel">
+          <div class="dashboard-card">
+            <div class="dashboard-top">
+              <span class="badge">Radar eleitoral</span>
+              <span class="mini-label">Exemplo</span>
+            </div>
 
-		<!-- Wrapper -->
-		<section id="wrapper">
+            <div class="chart-block">
+              <div class="bars" aria-hidden="true">
+                <span style="--height: 44%"></span>
+                <span style="--height: 61%"></span>
+                <span style="--height: 58%"></span>
+                <span style="--height: 79%"></span>
+                <span style="--height: 92%"></span>
+              </div>
 
-			<!-- One -->
-			<section id="one" class="wrapper spotlight style1">
-				<div class="inner">
-					<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-					<div class="content">
-						<h2 class="major">Plataforma Eleitoral</h2>
-						<p>Dashboards interativos que transformam dados públicos eleitorais em insights acionáveis.
-							Acompanhe resultados, compare candidatos e analise tendências com clareza.</p>
-						<a href="#" class="special">Explorar dados</a>
-					</div>
-				</div>
-			</section>
+              <div class="donut" aria-hidden="true">
+                <div class="donut-hole">
+                  <strong>62,5%</strong>
+                  <span>votos válidos</span>
+                </div>
+              </div>
+            </div>
 
-			<!-- Two -->
-			<section id="two" class="wrapper alt spotlight style2">
-				<div class="inner">
-					<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-					<div class="content">
-						<h2 class="major">Pacotes Python</h2>
-						<p>Ferramentas de código aberto para acesso a dados eleitorais brasileiros. Nossos pacotes
-							facilitam a coleta, o tratamento e a visualização de dados públicos.</p>
-						<a href="https://github.com/OutliersAnalytics" class="special">Ver pacotes</a>
-					</div>
-				</div>
-			</section>
+            <div class="metrics-row">
+              <article>
+                <strong>98,6%</strong>
+                <span>seções totalizadas</span>
+              </article>
+              <article>
+                <strong>18,7%</strong>
+                <span>abstenção</span>
+              </article>
+              <article>
+                <strong>+12,4%</strong>
+                <span>variação</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<!-- Three -->
-			<section id="three" class="wrapper spotlight style3">
-				<div class="inner">
-					<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-					<div class="content">
-						<h2 class="major">Análise de Dados</h2>
-						<p>De votos válidos a abstenção, passando por comparecimento e resultados por seção. Nossas
-							análises combinam rigor estatístico com visualizações claras.</p>
-						<a href="#" class="special">Saiba mais</a>
-					</div>
-				</div>
-			</section>
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Descrição</p>
+          <h2>“Outlier” é o ponto fora da curva. Em eleição, muitas vezes é onde a história começa.</h2>
+          <p>
+            A Outliers procura esse tipo de sinal: movimentos locais, diferenças persistentes
+            e mudanças que passam batido quando todo mundo olha só para o agregado.
+          </p>
+        </div>
 
-			<!-- Four -->
-			<section id="four" class="wrapper alt style1">
-				<div class="inner">
-					<h2 class="major">Projetos</h2>
-					<p>Ferramentas e pacotes de código aberto para análise de dados eleitorais.</p>
-					<section class="features">
-						<article>
-							<a href="https://www.gustavofurtado.com/dab/index.html" class="image"><img
-									src="https://raw.githubusercontent.com/GusFurtado/MyWebsite/refs/heads/master/images/projetos-dab.png"
-									alt="" /></a>
-							<h3 class="major">Dados Abertos Brasil</h3>
-							<p>Pacote Python para acesso a dados abertos e APIs do governo brasileiro. Ideal para
-								cientistas de dados e jornalistas.</p>
-							<a href="https://www.gustavofurtado.com/dab/index.html" class="special">Acessar pacote</a>
-						</article>
-						<article>
-							<a href="https://github.com/OutliersAnalytics/cellmate" class="image"><img
-									src="https://raw.githubusercontent.com/GusFurtado/MyWebsite/refs/heads/master/images/projetos-cellmate.png"
-									alt="" /></a>
-							<h3 class="major">cellmate</h3>
-							<p>Pacote Python para criar e gerenciar planilhas Excel estilizadas usando OpenPyXL. Exporte
-								seus dados com formatação profissional.</p>
-							<a href="https://github.com/OutliersAnalytics/cellmate" class="special">Acessar pacote</a>
-						</article>
-					</section>
-				</div>
-			</section>
+        <div class="story-layout">
+          <div class="story-copy">
+            <h3>O que fazemos com isso</h3>
+            <ul class="check-list">
+              <li>Limpamos e organizamos a base antes de interpretar qualquer número.</li>
+              <li>Comparamos resultado, participação e território no mesmo contexto.</li>
+              <li>Mostramos o que importa sem inflar conclusão.</li>
+            </ul>
+          </div>
 
-		</section>
+          <figure class="story-figure">
+            <img
+              class="section-mascot description-mascot"
+              src="assets/images/mascote-descricao-outliers.png"
+              alt="Mascote em destaque entre vários mascotes cinza"
+            >
+          </figure>
+        </div>
+      </div>
+    </section>
 
-		<!-- Footer -->
-		<section id="footer">
-			<div class="inner">
-				<h2 class="major">Contato</h2>
-				<p>Entre em contato para colaborações, sugestões ou para saber mais sobre nossos projetos de análise de
-					dados eleitorais.</p>
+    <section class="section section-alt" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Serviços</p>
+          <h2>Três frentes de trabalho, sem rodeio.</h2>
+          <p>
+            Produto, código e análise — cada uma resolve uma parte diferente do problema.
+          </p>
+        </div>
 
-				<ul class="contact">
-					<li class="icon brands fa-linkedin"><a
-							href="https://www.linkedin.com/company/outliersanalytics">linkedin.com/company/outliersanalytics</a>
-					</li>
-					<li class="icon brands fa-github"><a
-							href="https://github.com/OutliersAnalytics">github.com/OutliersAnalytics</a></li>
-					<li class="icon solid fa-envelope"><a
-							href="mailto:contato@outliersanalytics.com.br">contato@outliersanalytics.com.br</a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Outliers Analytics. Todos os direitos reservados.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
+        <div class="card-grid">
+          <article class="feature-card">
+            <img
+              class="feature-mascot"
+              src="assets/images/mascote-plataforma-eleitoral.png"
+              alt="Mascote com bandeira e megafone"
+            >
+            <h3>Plataforma eleitoral</h3>
+            <p>Dashboards para acompanhar resultado, abstenção e comparação territorial.</p>
+            <ul class="feature-list">
+              <li>Leitura por município, zona ou seção</li>
+              <li>Indicadores fáceis de cruzar</li>
+              <li>Visual pronto para uso público ou interno</li>
+            </ul>
+          </article>
 
-	</div>
+          <article class="feature-card">
+            <img
+              class="feature-mascot feature-mascot-blue"
+              src="assets/images/mascote-pacotes-python.png"
+              alt="Mascote azul trabalhando em um notebook com Python"
+            >
+            <h3>Pacotes Python</h3>
+            <p>Ferramentas para coletar, tratar e reaproveitar dados públicos com menos atrito.</p>
+            <ul class="feature-list">
+              <li>Rotinas de ETL reutilizáveis</li>
+              <li>Integração com fontes brasileiras</li>
+              <li>Fluxo pensado para análise de verdade</li>
+            </ul>
+          </article>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/main.js"></script>
+          <article class="feature-card">
+            <img
+              class="feature-mascot feature-mascot-purple"
+              src="assets/images/mascote-analise-de-dados.png"
+              alt="Mascote roxo observando painéis analíticos"
+            >
+            <h3>Análise de dados</h3>
+            <p>Estudos eleitorais com foco em padrão, contexto e interpretação cuidadosa.</p>
+            <ul class="feature-list">
+              <li>Séries históricas e recortes locais</li>
+              <li>Detecção de comportamento fora da curva</li>
+              <li>Relatórios diretos, sem jargão vazio</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="metodo">
+      <div class="container rigor-grid">
+        <div class="rigor-copy">
+          <p class="eyebrow">Método</p>
+          <h2>Rigor estatístico, do começo ao fim.</h2>
+          <p>
+            O trabalho fica mais confiável quando a base está limpa, a comparação é justa
+            e o gráfico não tenta parecer mais certeiro do que é.
+          </p>
+        </div>
+
+        <div class="method-board">
+          <article class="method-item">
+            <strong>Fonte</strong>
+            <span>Dados públicos, versionados e conferíveis.</span>
+          </article>
+          <article class="method-item">
+            <strong>Contexto</strong>
+            <span>Número sempre lido com território, tempo e participação.</span>
+          </article>
+          <article class="method-item">
+            <strong>Leitura</strong>
+            <span>Visualização enxuta, sem efeito que distorce interpretação.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projetos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Projetos</p>
+          <h2>Ferramentas abertas que já colocam essa abordagem em prática.</h2>
+          <p>
+            Dois exemplos de coisas úteis que saíram desse jeito de trabalhar.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-preview project-preview-dab" aria-hidden="true">
+              <div class="preview-toolbar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="preview-table">
+                <span class="row strong"></span>
+                <span class="row"></span>
+                <span class="row"></span>
+                <span class="row accent"></span>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span class="project-label">DadosAbertosBrasil</span>
+              <h3>Acesso mais simples a dados públicos e APIs do governo.</h3>
+              <p>
+                Pacote Python para buscar e organizar bases brasileiras sem repetir trabalho básico a cada projeto.
+              </p>
+              <div class="project-links">
+                <a class="text-link" href="https://www.gustavofurtado.com/dab/index.html">Abrir projeto</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview project-preview-cellmate" aria-hidden="true">
+              <div class="sheet-grid">
+                <span class="sheet-cell active"></span>
+                <span class="sheet-cell"></span>
+                <span class="sheet-cell"></span>
+                <span class="sheet-cell"></span>
+                <span class="sheet-cell"></span>
+                <span class="sheet-cell wide"></span>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span class="project-label">cellmate</span>
+              <h3>Planilhas melhores sem perder tempo em formatação manual.</h3>
+              <p>
+                Biblioteca Python para gerar arquivos Excel mais legíveis com OpenPyXL.
+              </p>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/OutliersAnalytics/cellmate">Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Contato</p>
+          <h2>Se fizer sentido para o seu projeto, vamos conversar.</h2>
+          <p>
+            Colaboração, dúvidas sobre dados eleitorais ou interesse nos pacotes —
+            o caminho mais simples é mandar uma mensagem.
+          </p>
+
+          <div class="contact-list">
+            <a class="contact-card" href="https://www.linkedin.com/company/outliersanalytics">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/company/outliersanalytics</span>
+            </a>
+            <a class="contact-card" href="https://github.com/OutliersAnalytics">
+              <strong>GitHub</strong>
+              <span>github.com/OutliersAnalytics</span>
+            </a>
+            <a class="contact-card" href="mailto:gustavofurtado2@gmail.com.br">
+              <strong>E-mail</strong>
+              <span>gustavofurtado2@gmail.com.br</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-visual">
+          <img
+            class="contact-mascot"
+            src="assets/images/mascote-contato.png"
+            alt="Mascote amarelo falando ao telefone"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Outliers Analytics — dados claros para decisões mais inteligentes.</p>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
 </body>
-
 </html>
