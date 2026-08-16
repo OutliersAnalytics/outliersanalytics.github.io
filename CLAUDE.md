@@ -35,4 +35,9 @@ go live.
 ## Branding
 
 Colors, typography, and logo assets should follow `outliers-design-system` — check that repo before
-introducing new visual styling here.
+introducing new visual styling here. `assets/css/theme-tokens.css` is a hand-maintained mirror of
+that repo's `tokens/*.json`, linked before `site.css` in `index.html`; prefer its `--color-*`/
+`--text-*`/`--space-*` variables for new styling. `site.css`'s own `:root` block still has a few
+bespoke/legacy variables that don't map cleanly onto tokens (translucent surface color, a card
+radius with no matching token, swapped `--brand-cyan`/`--brand-teal` names) — see the comment above
+that block before touching them.

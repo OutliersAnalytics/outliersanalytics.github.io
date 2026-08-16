@@ -1,0 +1,83 @@
+/* Canonical mirror of outliers-design-system/tokens/*.json (colors.json, typography.json,
+   spacing.json, shadows.json). Hand-maintained, not build-generated — see that repo's CLAUDE.md
+   "Source of truth" section. When a token value changes there, update it here too.
+
+   This file does NOT replace site.css's existing --bg/--surface/--brand-*/--radius-*/--shadow-soft
+   variables — several of those are deliberately bespoke (translucent glass-morphism surface, a
+   soft shadow lighter than any token, a 24px card radius with no matching token) and a couple have
+   pre-existing name/value drift from this file that needs a design decision, not a silent
+   auto-fix. See the comment above site.css's :root block. Use these --color-*/--text-*/--space-*
+   variables for new work; migrate the legacy names opportunistically. */
+:root {
+  /* color.brand */
+  --color-navy: #001d63;
+  --color-teal: #2fc7cc;
+  --color-cyan: #42d4d7;
+  --color-off-white: #f7f7f7;
+
+  /* color.neutral */
+  --color-neutral-900: #0d1321;
+  --color-neutral-700: #334155;
+  --color-neutral-500: #64748b;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-100: #f1f5f9;
+
+  /* color.semantic */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* color.light (this site is light-mode only) */
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-text-primary: #0d1321;
+  --color-text-secondary: #64748b;
+  --color-accent: #2fc7cc;
+
+  /* font */
+  --font-primary: "Montserrat", "Inter", Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* type scale */
+  --text-h1-size: 40px; --text-h1-weight: 700; --text-h1-line: 120%;
+  --text-h2-size: 28px; --text-h2-weight: 600; --text-h2-line: 120%;
+  --text-h3-size: 22px; --text-h3-weight: 600; --text-h3-line: 120%;
+  --text-h4-size: 18px; --text-h4-weight: 500; --text-h4-line: 120%;
+  --text-body-lg-size: 16px; --text-body-lg-weight: 400; --text-body-lg-line: 150%;
+  --text-body-size: 14px; --text-body-weight: 400; --text-body-line: 150%;
+  --text-caption-size: 12px; --text-caption-weight: 400; --text-caption-line: 140%;
+
+  /* space */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+
+  /* radius — --radius-lg-sd is intentionally NOT named --radius-lg: site.css already defines
+     --radius-lg at 24px (used by feature/project/contact cards) and this token's value is 12px.
+     Until that's reconciled by a design decision, keep both distinct instead of one silently
+     shadowing the other. --radius-xl matches site.css's existing --radius-xl (32px) exactly. */
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg-sd: 12px; --radius-xl: 32px; --radius-pill: 999px;
+
+  /* layout */
+  --layout-page-padding: 32px; --layout-section-gap: 48px; --layout-card-gap: 24px;
+  --layout-control-height: 40px; --layout-icon-size: 20px;
+
+  /* shadow */
+  --shadow-sm: 0 1px 2px rgba(13, 19, 33, 0.08);
+  --shadow-md: 0 8px 24px rgba(13, 19, 33, 0.1);
+  --shadow-lg: 0 16px 40px rgba(13, 19, 33, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(47, 199, 204, 0.3);
+
+  /* chart */
+  --chart-series-a: #2fc7cc;
+  --chart-series-b: #001d63;
+  --chart-series-c: #42d4d7;
+  --chart-series-other: #94a3b8;
+  --chart-map-low: #bdeff1;
+  --chart-map-high: #008ea0;
+}
