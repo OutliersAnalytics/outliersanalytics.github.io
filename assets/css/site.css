@@ -1,7 +1,7 @@
 /* This block deliberately keeps its own local variable names/values rather than pointing at
    theme-tokens.css's --color-*/--radius-* set — see that file's header for why. Known drift vs.
    the design-system tokens, left as-is pending a design decision:
-     --brand-cyan (#2fc7cc) and --brand-teal (#42d4d7) are swapped vs. system-design's canonical
+     --brand-cyan (#2fc7cc) and --brand-teal (#42d4d7) are swapped vs. design-system's canonical
        naming, where #2FC7CC is "teal" and #42D4D7 is "cyan" (see colors.json). Values are correct,
        only the two names are crossed — renaming risks a visual regression if any call site got the
        swap right by accident, so left alone until someone can eyeball a full re-render.
