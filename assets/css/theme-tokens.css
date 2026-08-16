@@ -2,12 +2,12 @@
    spacing.json, shadows.json). Hand-maintained, not build-generated — see that repo's CLAUDE.md
    "Source of truth" section. When a token value changes there, update it here too.
 
-   This file does NOT replace site.css's existing --bg/--surface/--brand-*/--radius-*/--shadow-soft
-   variables — several of those are deliberately bespoke (translucent glass-morphism surface, a
-   soft shadow lighter than any token, a 24px card radius with no matching token) and a couple have
-   pre-existing name/value drift from this file that needs a design decision, not a silent
-   auto-fix. See the comment above site.css's :root block. Use these --color-*/--text-*/--space-*
-   variables for new work; migrate the legacy names opportunistically. */
+   This file does NOT replace site.css's existing --bg / --surface / --brand-* / --radius-* /
+   --shadow-soft variables — several of those are deliberately bespoke (translucent glass-morphism
+   surface, a soft shadow lighter than any token, a 24px card radius with no matching token) and a
+   couple have pre-existing name/value drift from this file that needs a design decision, not a
+   silent auto-fix. See the comment above site.css's :root block. Use these --color-* / --text-* /
+   --space-* variables for new work; migrate the legacy names opportunistically. */
 :root {
   /* color.brand */
   --color-navy: #001d63;
