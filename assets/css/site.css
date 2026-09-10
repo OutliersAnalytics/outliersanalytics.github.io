@@ -427,36 +427,27 @@ ul {
   font-size: clamp(1.5rem, 6vw, 2.6rem);
 }
 
-/* DadosAbertosBrasil — heavy navy wordmark with a white outline */
+/* DadosAbertosBrasil — heavy Brazil-blue wordmark with a white outline,
+   over green/yellow/blue arcs (see the inline <svg>) */
 .project-shot--dab {
-  background: #0b1f6f;
+  background: #002776;
 }
 
 .project-shot--dab .shot-title {
   font-weight: 800;
   font-size: clamp(1.6rem, 15cqw, 3rem);
   letter-spacing: -0.015em;
-  color: #16318f;
+  color: #002776;
   -webkit-text-stroke: 0.13em #ffffff;
   paint-order: stroke fill;
 }
 
-/* Cellmate — thin white wordmark on an Excel-green cell grid */
+/* Cellmate — thin white wordmark on an Excel-green cell mosaic */
 .project-shot--cellmate {
-  background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 7.5%),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 12%),
-    linear-gradient(145deg, #1c7a46 0%, #22a15f 55%, #1e8b50 100%);
-}
-
-.project-shot--cellmate::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25% 75%, rgba(255, 255, 255, 0.06) 75%);
-  background-size: 15% 24%;
-  opacity: 0.7;
+  background-color: #10793f;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%20viewBox='0%200%20100%2060'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Crect%20fill='%2310793f'%20width='100'%20height='60'/%3E%3Crect%20fill='%2310793f'%20x='0'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23117c42'%20x='10'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='20'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='30'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='40'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='50'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='60'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='70'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='80'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='90'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23117c42'%20x='0'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='10'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='20'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='30'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='40'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='50'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='60'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='70'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='80'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='90'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='0'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='10'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='20'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='30'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='40'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='50'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='60'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='70'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='80'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='90'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='0'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='10'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='20'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='30'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='40'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='50'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='60'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='70'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='80'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='90'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='0'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='10'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='20'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='30'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='40'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='50'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='60'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='70'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='80'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2320a063'%20x='90'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='0'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='10'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='20'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='30'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='40'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='50'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='60'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='70'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%2320a063'%20x='80'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%2321a366'%20x='90'%20y='50'%20width='11'%20height='11'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
 }
 
 .project-shot--cellmate .shot-title {
@@ -466,11 +457,9 @@ ul {
   color: #ffffff;
 }
 
-/* MarkoWizard — brand navy→teal with an efficient-frontier motif */
+/* MarkoWizard — brand navy→teal arcs (see the inline <svg>) */
 .project-shot--marko {
-  background:
-    radial-gradient(130% 120% at 88% 12%, rgba(66, 212, 215, 0.5), transparent 55%),
-    linear-gradient(150deg, #001d63 0%, #062a72 48%, #0c3f88 100%);
+  background: #001d63;
 }
 
 .project-shot--marko .shot-title {
@@ -478,11 +467,12 @@ ul {
   font-size: clamp(1.5rem, 13cqw, 2.7rem);
   letter-spacing: -0.02em;
   color: #ffffff;
+  text-shadow: 0 2px 16px rgba(0, 15, 50, 0.45);
 }
 
 .project-shot--marko .shot-title em {
   font-style: normal;
-  color: #5fdfe2;
+  color: #a8ecee;
 }
 
 .project-copy {
