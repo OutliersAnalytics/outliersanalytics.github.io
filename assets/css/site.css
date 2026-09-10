@@ -428,9 +428,9 @@ ul {
 }
 
 /* DadosAbertosBrasil — heavy Brazil-blue wordmark with a white outline,
-   over green/yellow/blue arcs (see the inline <svg>) */
+   over green/yellow/blue layered waves (see the inline <svg>) */
 .project-shot--dab {
-  background: #002776;
+  background: #00af0d;
 }
 
 .project-shot--dab .shot-title {
