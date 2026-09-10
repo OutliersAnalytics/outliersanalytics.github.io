@@ -394,12 +394,95 @@ ul {
   border-radius: var(--radius-xl);
 }
 
+/* Project thumbnails are built in CSS/SVG — no raster assets. Each --modifier
+   paints its own background; .shot-title is the wordmark on top. */
 .project-shot {
+  position: relative;
+  display: grid;
+  place-items: center;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(238, 251, 252, 0.9), rgba(255, 255, 255, 0.96));
+  background: linear-gradient(150deg, #001d63, #0b3f86);
+  container-type: inline-size;
+}
+
+.shot-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shot-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
+  line-height: 1.05;
+  font-size: clamp(1.5rem, 6vw, 2.6rem);
+}
+
+/* DadosAbertosBrasil — heavy navy wordmark with a white outline */
+.project-shot--dab {
+  background: #0b1f6f;
+}
+
+.project-shot--dab .shot-title {
+  font-weight: 800;
+  font-size: clamp(1.6rem, 15cqw, 3rem);
+  letter-spacing: -0.015em;
+  color: #16318f;
+  -webkit-text-stroke: 0.13em #ffffff;
+  paint-order: stroke fill;
+}
+
+/* Cellmate — thin white wordmark on an Excel-green cell grid */
+.project-shot--cellmate {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 7.5%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 12%),
+    linear-gradient(145deg, #1c7a46 0%, #22a15f 55%, #1e8b50 100%);
+}
+
+.project-shot--cellmate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25% 75%, rgba(255, 255, 255, 0.06) 75%);
+  background-size: 15% 24%;
+  opacity: 0.7;
+}
+
+.project-shot--cellmate .shot-title {
+  font-weight: 200;
+  font-size: clamp(1.9rem, 21cqw, 3.7rem);
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+/* MarkoWizard — brand navy→teal with an efficient-frontier motif */
+.project-shot--marko {
+  background:
+    radial-gradient(130% 120% at 88% 12%, rgba(66, 212, 215, 0.5), transparent 55%),
+    linear-gradient(150deg, #001d63 0%, #062a72 48%, #0c3f88 100%);
+}
+
+.project-shot--marko .shot-title {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 13cqw, 2.7rem);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.project-shot--marko .shot-title em {
+  font-style: normal;
+  color: #5fdfe2;
 }
 
 .project-copy {
