@@ -475,6 +475,24 @@ ul {
   color: #a8ecee;
 }
 
+/* statsjunk — scatterplot + regression line on dark neutral (see the inline <svg>) */
+.project-shot--statsjunk {
+  background: #0d1321;
+}
+
+.project-shot--statsjunk .shot-title {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 12cqw, 2.5rem);
+  letter-spacing: -0.01em;
+  color: #f7f7f7;
+}
+
+.project-shot--statsjunk .shot-title em {
+  font-style: normal;
+  color: #42d4d7;
+}
+
 .project-copy {
   padding: 1.5rem;
 }
