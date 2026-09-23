@@ -497,6 +497,9 @@ ul {
 
 .project-links {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
 }
 
 .text-link {
