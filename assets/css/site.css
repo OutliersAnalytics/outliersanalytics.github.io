@@ -108,8 +108,6 @@ ul {
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
-.text-link:hover,
-.text-link:focus-visible,
 .site-footer a:hover,
 .site-footer a:focus-visible {
   color: var(--brand-cyan);
@@ -147,8 +145,7 @@ ul {
 .hero-lead,
 .section-heading p,
 .feature-card p,
-.contact-copy p,
-.project-copy p {
+.contact-copy p {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.8;
@@ -182,8 +179,6 @@ ul {
 .button:focus-visible,
 .contact-card:hover,
 .contact-card:focus-visible,
-.project-card:hover,
-.project-card:focus-within,
 .feature-card:hover,
 .feature-card:focus-within {
   transform: translateY(-2px);
@@ -227,7 +222,6 @@ ul {
 }
 
 .story-layout,
-.project-grid,
 .contact-grid {
   display: grid;
   gap: 2rem;
@@ -310,12 +304,11 @@ ul {
 }
 
 .card-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 2rem;
 }
 
 .feature-card,
-.project-card,
 .contact-card {
   border: 1px solid rgba(226, 235, 240, 0.96);
   background: var(--surface);
@@ -330,8 +323,7 @@ ul {
   padding-top: 6.8rem;
 }
 
-.feature-card h3,
-.project-copy h3 {
+.feature-card h3 {
   margin: 0 0 0.85rem;
   font-size: 1.45rem;
   color: var(--brand-navy);
@@ -349,10 +341,6 @@ ul {
   width: 8.75rem;
   filter: drop-shadow(0 16px 20px rgba(13, 19, 33, 0.10));
   pointer-events: none;
-}
-
-.feature-mascot-blue {
-  width: 8.4rem;
 }
 
 .feature-mascot-purple {
@@ -382,148 +370,6 @@ ul {
   height: 0.42rem;
   border-radius: 50%;
   background: var(--brand-cyan);
-}
-
-.project-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 2rem;
-}
-
-.project-card {
-  overflow: hidden;
-  border-radius: var(--radius-xl);
-}
-
-/* Project thumbnails are built in CSS/SVG — no raster assets. Each --modifier
-   paints its own background; .shot-title is the wordmark on top. */
-.project-shot {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border);
-  background: linear-gradient(150deg, #001d63, #0b3f86);
-  container-type: inline-size;
-}
-
-.shot-bg {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.shot-title {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  padding: 0 1rem;
-  text-align: center;
-  font-family: "Montserrat", "Segoe UI", sans-serif;
-  line-height: 1.05;
-  font-size: clamp(1.5rem, 6vw, 2.6rem);
-}
-
-/* DadosAbertosBrasil — heavy Brazil-blue wordmark with a white outline,
-   over green/yellow/blue layered waves (see the inline <svg>) */
-.project-shot--dab {
-  background: #00af0d;
-}
-
-.project-shot--dab .shot-title {
-  font-weight: 800;
-  font-size: clamp(1.6rem, 15cqw, 3rem);
-  letter-spacing: -0.015em;
-  color: #002776;
-  -webkit-text-stroke: 0.13em #ffffff;
-  paint-order: stroke fill;
-}
-
-/* Cellmate — thin white wordmark on an Excel-green cell mosaic */
-.project-shot--cellmate {
-  background-color: #10793f;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%20viewBox='0%200%20100%2060'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Crect%20fill='%2310793f'%20width='100'%20height='60'/%3E%3Crect%20fill='%2310793f'%20x='0'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23117c42'%20x='10'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='20'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='30'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='40'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='50'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='60'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='70'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='80'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='90'%20y='0'%20width='11'%20height='11'/%3E%3Crect%20fill='%23117c42'%20x='0'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='10'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='20'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='30'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='40'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='50'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='60'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='70'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='80'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='90'%20y='10'%20width='11'%20height='11'/%3E%3Crect%20fill='%23127f45'%20x='0'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='10'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='20'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='30'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='40'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='50'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='60'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='70'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='80'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='90'%20y='20'%20width='11'%20height='11'/%3E%3Crect%20fill='%23148247'%20x='0'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='10'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='20'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='30'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='40'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='50'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='60'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='70'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='80'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='90'%20y='30'%20width='11'%20height='11'/%3E%3Crect%20fill='%2315854a'%20x='0'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='10'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='20'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='30'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='40'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='50'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='60'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='70'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='80'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2320a063'%20x='90'%20y='40'%20width='11'%20height='11'/%3E%3Crect%20fill='%2316884d'%20x='0'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%23178b50'%20x='10'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%23188e52'%20x='20'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231a9155'%20x='30'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231b9458'%20x='40'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231c975b'%20x='50'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231d9a5e'%20x='60'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%231f9d60'%20x='70'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%2320a063'%20x='80'%20y='50'%20width='11'%20height='11'/%3E%3Crect%20fill='%2321a366'%20x='90'%20y='50'%20width='11'%20height='11'/%3E%3C/svg%3E");
-  background-size: cover;
-  background-position: center;
-}
-
-.project-shot--cellmate .shot-title {
-  font-weight: 200;
-  font-size: clamp(1.9rem, 21cqw, 3.7rem);
-  letter-spacing: 0.005em;
-  color: #ffffff;
-}
-
-/* MarkoWizard — brand navy→teal arcs (see the inline <svg>) */
-.project-shot--marko {
-  background: #001d63;
-}
-
-.project-shot--marko .shot-title {
-  font-weight: 700;
-  font-size: clamp(1.5rem, 13cqw, 2.7rem);
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  text-shadow: 0 2px 16px rgba(0, 15, 50, 0.45);
-}
-
-.project-shot--marko .shot-title em {
-  font-style: normal;
-  color: #a8ecee;
-}
-
-/* statsjunk — dark plum with a faceted low-poly pattern */
-.project-shot--statsjunk {
-  background-color: #330033;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-.project-shot--statsjunk .shot-title {
-  font-family: "Courier New", monospace;
-  font-weight: 700;
-  font-size: clamp(1.4rem, 12cqw, 2.5rem);
-  letter-spacing: -0.01em;
-  color: #f7f7f7;
-}
-
-.project-shot--statsjunk .shot-title em {
-  font-style: normal;
-  color: #42d4d7;
-}
-
-.project-copy {
-  padding: 1.5rem;
-}
-
-.project-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  min-height: 2rem;
-  padding: 0 0.8rem;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--brand-navy);
-  background: rgba(47, 199, 204, 0.14);
-}
-
-.project-links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-}
-
-.text-link {
-  color: var(--brand-cyan);
-  font-weight: 700;
 }
 
 .contact-grid {
@@ -584,13 +430,8 @@ ul {
 @media (max-width: 1080px) {
 
   .story-layout,
-  .project-grid,
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-copy h1,
