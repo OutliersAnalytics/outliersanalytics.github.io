@@ -488,3 +488,90 @@ ul {
     width: min(100%, 18rem);
   }
 }
+/* Páginas de texto (ajuda.html): fontes, métodos e referências. */
+.doc {
+  max-width: 52rem;
+}
+
+.doc p,
+.doc dd,
+.doc li {
+  line-height: 1.65;
+}
+
+.doc a {
+  color: var(--brand-navy);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.doc-notice {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--brand-cyan);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.doc-notice p + p {
+  margin-top: 0.75rem;
+}
+
+.doc-h3,
+.doc-group {
+  margin: 2.5rem 0 1rem;
+  color: var(--brand-navy);
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.doc-sources dt {
+  margin-top: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.doc-sources dd {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.doc-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(226, 235, 240, 0.96);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  scroll-margin-top: 5rem;
+}
+
+.doc-card h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  color: var(--brand-navy);
+}
+
+.doc-card p + p {
+  margin-top: 0.6rem;
+}
+
+.doc-card:target {
+  border-color: var(--brand-cyan);
+}
+
+.doc-refs {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.doc-refs li + li {
+  margin-top: 0.75rem;
+}
+
+.doc-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidade — Outliers Analytics</title>
+  <meta name="description" content="O que o app e o site da Outliers fazem, e não fazem, com dados de quem os visita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/css/theme-tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body id="inicio">
+  <header class="site-header">
+    <div class="container header-row">
+      <nav class="site-nav" aria-label="Seções">
+        <a href="index.html">Início</a>
+        <a href="ajuda.html">Fontes e métodos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container doc">
+        <div class="section-heading">
+          <p class="eyebrow">Privacidade</p>
+          <h2>O que fazemos com os seus dados</h2>
+          <p>Em resumo: quase nada. O app não tem login, não usa cookies e não guarda dados pessoais de quem o visita.</p>
+        </div>
+
+        <h3 class="doc-h3">O que não coletamos</h3>
+        <ul class="doc-refs">
+          <li>Não há cadastro nem login, e nenhum nome, e-mail ou telefone é pedido.</li>
+          <li>Nem o app nem o site usam cookies.</li>
+          <li>O seu endereço IP não fica gravado nos nossos servidores.</li>
+        </ul>
+
+        <h3 class="doc-h3">Localização</h3>
+        <p>O botão "usar localização atual" é opcional e só funciona se você autorizar no navegador ou no celular. Ao
+          tocar nele, o app envia a coordenada para o nosso servidor, que responde em qual município ela fica. A
+          coordenada não é guardada: não entra nos registros do servidor nem em nenhum cache. O município encontrado
+          só é usado na tela aberta e também não fica salvo.</p>
+
+        <h3 class="doc-h3">O que fica no seu aparelho</h3>
+        <p>O estado que você escolhe nas configurações fica salvo no próprio navegador ou celular, para o app abrir
+          nele da próxima vez. Isso nunca é enviado para nós. Para apagar, basta limpar os dados do site no
+          navegador.</p>
+
+        <h3 class="doc-h3">Medição de visitas</h3>
+        <p>Contamos visitas e páginas vistas com o Cloudflare Web Analytics. Ele não usa cookies, não identifica o
+          visitante e não acompanha ninguém de um site para outro. Só vemos números agregados.</p>
+
+        <h3 class="doc-h3">Serviços de terceiros</h3>
+        <p>Algumas partes vêm de outros serviços, e o seu navegador se conecta direto a eles. Cada um recebe o seu
+          endereço IP, como acontece em qualquer site, e segue a sua própria política de privacidade:</p>
+        <dl class="doc-sources">
+          <dt>Cloudflare</dt>
+          <dd>Rede por onde passam o app, o site e o servidor, e que faz a medição de visitas. <a
+              href="https://www.cloudflare.com/pt-br/privacypolicy/">Política de privacidade</a>.</dd>
+          <dt>GitHub Pages</dt>
+          <dd>Hospeda este site. <a
+              href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement">Política
+              de privacidade</a>.</dd>
+          <dt>OpenStreetMap</dt>
+          <dd>Os mapas de fundo. O serviço recebe os trechos do mapa que você abre. <a
+              href="https://osmfoundation.org/wiki/Privacy_Policy">Política de privacidade</a>.</dd>
+          <dt>Google Fonts</dt>
+          <dd>A fonte de texto (Montserrat). <a href="https://policies.google.com/privacy?hl=pt-BR">Política de
+              privacidade</a>.</dd>
+        </dl>
+
+        <h3 class="doc-h3">Os dados eleitorais</h3>
+        <p>Os nomes, números, partidos e votos dos candidatos e o perfil do eleitorado por seção são dados públicos,
+          publicados pelo Tribunal Superior Eleitoral no seu <a href="https://dadosabertos.tse.jus.br/">Portal de
+            Dados Abertos</a>. O perfil do eleitorado vem agregado por seção: ele não identifica nenhum eleitor. As
+          fontes de cada página estão em <a href="ajuda.html">Fontes e métodos</a>.</p>
+
+        <h3 class="doc-h3">Contato</h3>
+        <!-- Trocar pelo endereço do domínio (Email Routing da Cloudflare) quando ele existir (#176, #181). -->
+        <p>Dúvidas sobre privacidade: <a href="mailto:contato@DOMINIO">contato@DOMINIO</a>.</p>
+
+        <p class="doc-note">Última atualização: 18/11/2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Outliers Analytics</p>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
+</body>
+
+</html>
