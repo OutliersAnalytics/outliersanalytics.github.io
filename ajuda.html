@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fontes e métodos — Outliers Analytics</title>
+  <meta name="description" content="De onde vêm os números de cada página do app Outliers e como eles são calculados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/css/theme-tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body id="inicio">
+  <header class="site-header">
+    <div class="container header-row">
+      <nav class="site-nav" aria-label="Seções">
+        <a href="index.html">Início</a>
+        <a href="#paginas">Páginas</a>
+        <a href="#referencias">Referências</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container doc">
+        <div class="section-heading">
+          <p class="eyebrow">Ajuda</p>
+          <h2>Fontes e métodos</h2>
+          <p>
+            De onde vêm os números de cada página do app e como eles são calculados. Todos os dados
+            são públicos, publicados pelo TSE e pelo IBGE.
+          </p>
+        </div>
+
+        <div class="doc-notice">
+          <!-- Atualizar a cada carga de dados (pipeline: reload + dbt build). -->
+          <p><strong>Dados atualizados em:</strong> 19/11/2026, com os dois turnos de 2026.</p>
+          <p><strong>Cobertura:</strong> votos e perfil do eleitorado só do estado de São Paulo, nas eleições
+            de 2014 a 2026. A exceção é Presidente, com votos do país inteiro em 2014, 2018, 2022 e 2026.
+            Candidatos de todos os estados estão na base, mas sem os votos fora de SP.</p>
+        </div>
+
+        <h3 class="doc-h3">As bases</h3>
+        <dl class="doc-sources">
+          <dt>TSE: votação por seção eleitoral</dt>
+          <dd>Votos de cada candidato, legenda, brancos e nulos em cada seção. Base de quase todas as páginas.
+            <a href="https://dadosabertos.tse.jus.br/dataset/resultados-2026">Portal de Dados Abertos do TSE,
+              conjunto "Resultados"</a> (um por ano).</dd>
+          <dt>TSE: candidatos</dt>
+          <dd>Nome, número, partido, cargo e situação de cada candidatura.
+            <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026">Conjunto "Candidatos"</a>.</dd>
+          <dt>TSE: perfil do eleitorado por seção e locais de votação</dt>
+          <dd>Eleitores aptos de cada seção por gênero, faixa etária, cor/raça, escolaridade e estado civil, e o
+            endereço e a coordenada de cada local de votação.
+            <a href="https://dadosabertos.tse.jus.br/dataset/eleitorado-2026">Conjunto "Eleitorado"</a>.</dd>
+          <dt>IBGE: Censo Demográfico 2022, agregados e malha por setor censitário</dt>
+          <dd>Renda e outras características dos moradores de cada setor. Cada local de votação é ligado ao setor
+            onde fica, pela coordenada.
+            <a href="https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/">Agregados
+              por setores</a> e <a
+              href="https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_de_setores_censitarios__divisoes_intramunicipais/censo_2022/">malha
+              de setores</a>.</dd>
+          <dt>IBGE: religião (Censo 2022)</dt>
+          <dd>População por religião em cada município. <a href="https://sidra.ibge.gov.br/tabela/9537">SIDRA,
+              tabela 9537</a>.</dd>
+          <dt>IBGE: PIB dos Municípios</dt>
+          <dd>PIB municipal de 2010 a 2023. <a href="https://ftp.ibge.gov.br/Pib_Municipios/">IBGE, PIB dos
+              Municípios</a>.</dd>
+          <dt>IBGE: população</dt>
+          <dd>População do Censo 2022 e estimativas anuais por município. <a
+              href="https://sidra.ibge.gov.br/tabela/4709">SIDRA, tabela 4709</a> e <a
+              href="https://sidra.ibge.gov.br/tabela/6579">tabela 6579</a>.</dd>
+        </dl>
+
+        <div class="doc-notice">
+          <p><strong>Uma ressalva que vale para várias páginas.</strong> O voto é secreto: ninguém sabe quem votou em
+            quem. Quando uma página diz que um candidato vai bem entre, por exemplo, mulheres, ela está comparando
+            locais de votação. Nos locais com mais eleitoras, o candidato teve mais votos. Isso é uma correlação
+            ecológica, entre lugares, e não prova que cada eleitora votou nele (Robinson, 1950). Leia como
+            "provavelmente", que é a palavra que o app usa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="paginas">
+      <div class="container doc">
+        <div class="section-heading">
+          <p class="eyebrow">Páginas</p>
+          <h2>Página a página</h2>
+        </div>
+
+        <h3 class="doc-group">Eleitores</h3>
+
+        <article class="doc-card" id="perfil-eleitorado">
+          <h4>Como é o meu eleitor?</h4>
+          <p><strong>Dados:</strong> votação por seção, perfil do eleitorado por seção e locais de votação (TSE); renda
+            por setor censitário (IBGE, Censo 2022).</p>
+          <p><strong>Método:</strong> para cada categoria (por exemplo, "Feminino"), a correlação de Pearson entre a
+            participação dela no eleitorado de cada local e o percentual de votos do candidato ou partido escolhido,
+            através dos locais do recorte. As categorias são ordenadas pela correlação. O IBGE não publica a renda por
+            faixa, só a média do setor. Por isso, os locais são divididos em três terços pela renda média, e a
+            correlação é ponto-bisserial ("o local está neste terço", sim ou não).</p>
+          <p><strong>Referências:</strong> Pearson (1895); Robinson (1950).</p>
+        </article>
+
+        <article class="doc-card" id="abstencao">
+          <h4>Quem não votou?</h4>
+          <p><strong>Dados:</strong> votação por seção (comparecimento, brancos e nulos) e perfil do eleitorado por
+            seção (eleitores aptos), do TSE.</p>
+          <p><strong>Método:</strong> abstenção é a parte dos eleitores aptos que não compareceu; brancos e nulos são
+            contados entre os que compareceram. O perfil de quem ficou de fora usa a mesma correlação ecológica da
+            página anterior, entre a composição do eleitorado de cada local e a abstenção nele.</p>
+          <p><strong>Referências:</strong> Pearson (1895); Robinson (1950).</p>
+        </article>
+
+        <h3 class="doc-group">Candidatos</h3>
+
+        <article class="doc-card" id="quem-venceu">
+          <h4>Quem venceu?</h4>
+          <p><strong>Dados:</strong> votação por seção e candidatos (TSE); malha de municípios (IBGE).</p>
+          <p><strong>Método:</strong> soma dos votos por município ou por local de votação e o mais votado em cada um,
+            numa eleição inteira, entre dois nomes ou num grupo escolhido. É contagem direta, sem estimativa.</p>
+        </article>
+
+        <article class="doc-card" id="montar-chapa">
+          <h4>Quem devo colocar na chapa comigo?</h4>
+          <p><strong>Dados:</strong> votação por seção e candidatos (TSE).</p>
+          <p><strong>Método:</strong> correlação de Pearson entre os percentuais de voto de dois candidatos nos locais
+            de votação em que ambos tiveram votos, com pelo menos 4 locais em comum. Ler uma correlação baixa como
+            "este parceiro traz eleitores novos" é <em>metodologia nossa</em>: os dois são fortes em lugares
+            diferentes.</p>
+          <p><strong>Referências:</strong> Pearson (1895).</p>
+        </article>
+
+        <article class="doc-card" id="alcance">
+          <h4>Onde estão os redutos eleitorais?</h4>
+          <p><strong>Dados:</strong> votação por seção, candidatos e locais de votação (TSE); malha de municípios
+            (IBGE).</p>
+          <p><strong>Método:</strong> percentual de votos do candidato ou partido em cada município, ou em cada local de
+            votação dentro de uma cidade, mostrado no mapa.</p>
+        </article>
+
+        <article class="doc-card" id="fragmentacao">
+          <h4>Onde a eleição é mais concorrida?</h4>
+          <p><strong>Dados:</strong> votação por seção e perfil do eleitorado (TSE).</p>
+          <p><strong>Método:</strong> número efetivo de candidatos de Laakso e Taagepera: 1 dividido pela soma dos
+            quadrados das fatias de voto. Fica perto de 1 quando um nome domina e perto do número de candidatos quando
+            o voto se divide por igual. O mesmo cálculo sobre os votos por partido dá o número efetivo de partidos.
+            Eleitores por candidato efetivo, o eleitorado dividido por esse número, é <em>metodologia nossa</em>.</p>
+          <p><strong>Referências:</strong> Laakso e Taagepera (1979).</p>
+        </article>
+
+        <article class="doc-card" id="evolucao-partido">
+          <h4>Onde um partido cresceu ou caiu?</h4>
+          <p><strong>Dados:</strong> votação por seção e candidatos (TSE), em duas eleições do mesmo cargo.</p>
+          <p><strong>Método:</strong> diferença entre o percentual de votos do partido nas duas eleições, por município
+            ou por local de votação.</p>
+        </article>
+
+        <h3 class="doc-group">Simuladores</h3>
+
+        <article class="doc-card" id="simular-votacao">
+          <h4>Simulador de voto</h4>
+          <p><strong>Dados:</strong> perfil do eleitorado (TSE), na eleição mais recente; religião (IBGE, Censo 2022).
+            A religião vem da população, não do eleitorado, porque o TSE não registra religião.</p>
+          <p><strong>Método:</strong> cenário hipotético. O total é a média dos percentuais que você atribui a cada
+            grupo, ponderada pelo tamanho real dele. No gráfico, a largura de cada faixa é o tamanho do grupo e a
+            altura é o percentual atribuído.</p>
+        </article>
+
+        <article class="doc-card" id="modelo">
+          <h4>Modelo de Regressão</h4>
+          <p><strong>Dados:</strong> votos e perfil do eleitorado (TSE); Censo 2022, PIB dos Municípios, população e
+            religião (IBGE).</p>
+          <p><strong>Método:</strong> correlação de Pearson de cada variável com o grupo escolhido e regressão linear
+            múltipla por mínimos quadrados com todas juntas, com R², valor-p e VIF. O nível geográfico é o mais fino
+            que tenha amostra suficiente, do setor censitário ao município. Se os resíduos têm autocorrelação espacial
+            (I de Moran, com os 8 vizinhos mais próximos de cada região), o app avisa que os valores-p podem estar
+            otimistas.</p>
+          <p><strong>Referências:</strong> Pearson (1895); Moran (1950).</p>
+        </article>
+
+        <article class="doc-card" id="simulador-relevancia">
+          <h4>Simulador de relevância nas redes sociais</h4>
+          <p><strong>Dados:</strong> nenhum. Você digita os números de cada perfil; o app não lê dados de redes
+            sociais.</p>
+          <p><strong>Método:</strong> <em>metodologia nossa</em>, inspirada no índice IR² da Nexus, cuja fórmula não é
+            pública. Por rede, o engajamento é curtidas × 1 + comentários × 3 + compartilhamentos × 5, e a eficiência
+            é o engajamento por post. Em cada rede, engajamento (40%), eficiência (30%), seguidores (20%) e número de
+            posts (10%) são normalizados de 0 a 1 entre os perfis daquela rede e somados com esses pesos. O score final
+            de um perfil é a média dos scores das redes que ele tem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="referencias">
+      <div class="container doc">
+        <div class="section-heading">
+          <p class="eyebrow">Referências</p>
+        </div>
+        <ul class="doc-refs">
+          <li>Laakso, M.; Taagepera, R. (1979). "Effective" number of parties: a measure with application to West
+            Europe. <em>Comparative Political Studies</em>, 12(1), 3–27. <a
+              href="https://doi.org/10.1177/001041407901200101">doi:10.1177/001041407901200101</a></li>
+          <li>Moran, P. A. P. (1950). Notes on continuous stochastic phenomena. <em>Biometrika</em>, 37(1/2), 17–23. <a
+              href="https://doi.org/10.2307/2332142">doi:10.2307/2332142</a></li>
+          <li>Pearson, K. (1895). Note on regression and inheritance in the case of two parents. <em>Proceedings of the
+              Royal Society of London</em>, 58, 240–242. <a
+              href="https://doi.org/10.1098/rspl.1895.0041">doi:10.1098/rspl.1895.0041</a></li>
+          <li>Robinson, W. S. (1950). Ecological correlations and the behavior of individuals. <em>American Sociological
+              Review</em>, 15(3), 351–357. <a href="https://doi.org/10.2307/2087176">doi:10.2307/2087176</a></li>
+        </ul>
+        <p class="doc-note">Os cálculos estatísticos usam o pacote aberto <a
+            href="https://pypi.org/project/statsjunk/">statsjunk</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Outliers Analytics · <a href="privacidade.html">Privacidade</a></p>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
+</body>
+
+</html>
