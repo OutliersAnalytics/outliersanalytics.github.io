@@ -52,6 +52,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -83,8 +84,8 @@ ul {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.82);
+  /* Sem backdrop-filter: o desfoque era refeito a cada quadro da rolagem e travava no celular. */
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(226, 235, 240, 0.9);
 }
 
@@ -277,8 +278,7 @@ ul {
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(47, 199, 204, 0.16), rgba(47, 199, 204, 0));
-  filter: blur(10px);
+  background: radial-gradient(circle, rgba(47, 199, 204, 0.16), rgba(47, 199, 204, 0) 70%);
   z-index: -1;
 }
 
@@ -312,7 +312,6 @@ ul {
 .contact-card {
   border: 1px solid rgba(226, 235, 240, 0.96);
   background: var(--surface);
-  backdrop-filter: blur(14px);
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-lg);
 }
@@ -339,7 +338,6 @@ ul {
   top: -1.75rem;
   right: 0.75rem;
   width: 8.75rem;
-  filter: drop-shadow(0 16px 20px rgba(13, 19, 33, 0.10));
   pointer-events: none;
 }
 
@@ -407,7 +405,6 @@ ul {
 .contact-mascot {
   width: min(100%, 20rem);
   margin: 0;
-  filter: drop-shadow(0 18px 26px rgba(13, 19, 33, 0.10));
 }
 
 .site-footer {
