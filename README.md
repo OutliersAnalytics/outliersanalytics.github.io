@@ -2,4 +2,4 @@
 
 Files for the organization website hosted on GitHub Pages.
 
-> https://outliersanalytics.github.io
+> https://outliers.app.br
